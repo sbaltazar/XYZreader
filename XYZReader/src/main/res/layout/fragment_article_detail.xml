@@ -2,14 +2,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/draw_insets_frame_layout"
+    android:fitsSystemWindows="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <android.support.design.widget.CoordinatorLayout
+        android:fitsSystemWindows="true"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar_layout_detail"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
@@ -22,29 +25,15 @@
                 app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
                 <android.support.constraint.ConstraintLayout
+                    android:id="@+id/constraintlayout_banner"
                     android:layout_width="match_parent"
                     android:layout_height="200dp">
-
-<!--                    <ImageView-->
-<!--                        android:id="@+id/photo"-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:contentDescription="@string/app_name"-->
-<!--                        android:scaleType="center"-->
-<!--                        android:src="@drawable/logo"-->
-<!--                        app:layout_collapseMode="parallax" />-->
-
-<!--                    <View-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:background="@drawable/photo_background_protection"-->
-<!--                        app:layout_constraintTop_toTopOf="@id/photo" />-->
 
                     <View
                         android:id="@+id/photo"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/bg_gradient"/>
+                        android:background="@drawable/bg_gradient" />
 
                     <LinearLayout
                         android:id="@+id/meta_bar"
@@ -68,7 +57,7 @@
                             android:textColor="#fff"
                             android:textSize="@dimen/detail_title_text_size"
                             android:textStyle="bold"
-                            tools:text="Test"/>
+                            tools:text="Test" />
 
                         <TextView
                             android:id="@+id/article_byline"
@@ -76,7 +65,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="#8fff"
-                            tools:text="Test text - Example Author"/>
+                            tools:text="Test text - Example Author" />
                     </LinearLayout>
 
                 </android.support.constraint.ConstraintLayout>
@@ -113,6 +102,7 @@
                     android:layout_marginLeft="@dimen/detail_inner_horiz_margin"
                     android:layout_marginRight="@dimen/detail_inner_horiz_margin"
                     android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier"
+                    android:paddingTop="@dimen/detail_body_top_margin"
                     android:paddingBottom="@dimen/detail_body_bottom_margin"
                     android:textColor="@color/text_high_emphasis"
                     android:textColorLink="@color/theme_accent"

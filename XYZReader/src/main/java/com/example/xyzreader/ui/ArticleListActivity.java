@@ -205,4 +205,6 @@ public class ArticleListActivity extends AppCompatActivity implements
             subtitleView = (TextView) view.findViewById(R.id.article_subtitle);
         }
     }
+
+
 }
