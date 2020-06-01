@@ -2,25 +2,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/draw_insets_frame_layout"
-    android:fitsSystemWindows="true"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
 
     <android.support.design.widget.CoordinatorLayout
-        android:fitsSystemWindows="true"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
 
         <android.support.design.widget.AppBarLayout
             android:id="@+id/appbar_layout_detail"
             android:layout_width="match_parent"
             android:layout_height="200dp"
+            android:fitsSystemWindows="true"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
             <android.support.design.widget.CollapsingToolbarLayout
                 android:id="@+id/photo_container"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
                 android:background="@color/photo_placeholder"
                 app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
@@ -106,7 +108,8 @@
                     android:paddingBottom="@dimen/detail_body_bottom_margin"
                     android:textColor="@color/text_high_emphasis"
                     android:textColorLink="@color/theme_accent"
-                    android:textSize="@dimen/detail_body_text_size" />
+                    android:textSize="@dimen/detail_body_text_size"
+                    tools:text="Text example"/>
 
             </com.example.xyzreader.ui.MaxWidthLinearLayout>
         </com.example.xyzreader.ui.ObservableScrollView>
