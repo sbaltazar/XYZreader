@@ -22,8 +22,8 @@
                 android:id="@+id/photo_container"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:fitsSystemWindows="true"
                 android:background="@color/photo_placeholder"
+                android:fitsSystemWindows="true"
                 app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
                 <android.support.constraint.ConstraintLayout
@@ -109,22 +109,23 @@
                     android:textColor="@color/text_high_emphasis"
                     android:textColorLink="@color/theme_accent"
                     android:textSize="@dimen/detail_body_text_size"
-                    tools:text="Text example"/>
+                    tools:text="Text example" />
 
             </com.example.xyzreader.ui.MaxWidthLinearLayout>
         </com.example.xyzreader.ui.ObservableScrollView>
     </android.support.design.widget.CoordinatorLayout>
 
-    <ImageButton
+    <android.support.design.widget.FloatingActionButton
         android:id="@+id/share_fab"
         android:layout_width="56dp"
         android:layout_height="56dp"
         android:layout_gravity="bottom|end"
         android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginBottom="@dimen/fab_margin"
-        android:background="@drawable/add_fab_background"
+        android:backgroundTint="@color/theme_accent"
         android:contentDescription="@string/action_share"
         android:src="@drawable/ic_share"
-        android:stateListAnimator="@anim/fab_state_list_anim" />
+        app:borderWidth="0dp"
+        app:elevation="6dp" />
 
 </com.example.xyzreader.ui.DrawInsetsFrameLayout>
